@@ -23,14 +23,50 @@
                     height: 50px;
                     text-align: left;
                 }
+                .apDiv4{
+                    height: 200px;
+                    border-style:dashed;
+                    border-width: 1px;
+                    text-align: center;
+                }
+                .apDiv5{
+                    position: relative;
+                    left: 20px;
+                    top: 150px;
+                }
             </style>
     </head>
     <body>
         <div class="apDiv1">校园BBS系统</div>
         <div class="apDiv2">您尚未&nbsp;&nbsp;&nbsp;<a href="#">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">注册</a>&nbsp;&nbsp;|</div>
         <div class="apDiv3">>><a href="index.html"><strong>论坛首页</strong></a></div>
-        <form>
-            
-        </form>
+        <div class="apDiv4">
+            <form id="form1" name="form1" method="post" action=" ">
+                <table align="center" height="115" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="center">
+                            <span class="text">用户名</span>
+                            <label>
+                                <input name="uname" type="text" id="textfield1" />
+                            </label>
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td align="center">
+                            <span class="body">密 码&nbsp;&nbsp;&nbsp;</span>
+                            <label>
+                                <input name="uname" type="text" id="textfield2" />
+                            </label>
+                        </td>
+                    </tr>
+                    
+                    <div class="apDiv5">
+                       <button>登录</button>
+                    </div>
+
+                </table>
+            </form>
+        </div>
     </body>
 </html>
