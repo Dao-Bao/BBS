@@ -33,19 +33,41 @@
                     position: relative;
                     left: 440px; 
                 }
+                .loginError{
+                    position: absolute;
+                    left:810px; 
+
+                }
             </style>
+            <script language ="javascript">
+                function check(){
+                    if(document.form1.uname.value ==""){
+                        alert("用户名不能为空");
+                        return false;
+                    }
+                    if(document.form1.upass.value ==""){
+                        alert("密码不能为空");
+                        return false;
+                    }
+                    if(document.form1.upass.value != document.form1.upass2.value){
+                        alert("2次密码不一样");
+                        return false;
+                    }
+                }
+            </script>
     </head>
     <body>
         <div class="apDiv1">校园BBS系统</div>
         <div class="apDiv2">您尚未&nbsp;&nbsp;&nbsp;<a href="#">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">注册</a>&nbsp;&nbsp;|</div>
         <div class="apDiv3">>><a href="index.html"><strong>论坛首页</strong></a></div>
         <div class="apDiv4">
-                <form id="forml" name="forml" method="post" action="">
+                <form id="forml" name="form1" onSubmit="return check()" method="post" action="">
                     <table width = "100%" height="115" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td align="center"><span class="body">用户名:</span>
                                 <label>
                                     <input name="uname" type="text" id="textfield1" />
+                                    <div class="loginError" style="display:inline">用户名不能为空</div>
                                 </label>
                             </td>
                         </tr>
@@ -54,6 +76,7 @@
                                 <span class="body">密码：</span>
                                 <label>
                                     <input name="upass" type="password" id="textfild2" />
+                                    <div class="loginError" style="display:inline">密码不能少于6位</div>
                                 </label>
                             </td>
                         </tr>
